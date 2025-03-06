@@ -1,0 +1,273 @@
+prompt --application/pages/page_00006
+begin
+--   Manifest
+--     PAGE: 00006
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.2'
+,p_default_workspace_id=>14034458231606232391
+,p_default_application_id=>75063
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_BAGESHWORI'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>6
+,p_name=>'USERS FORM'
+,p_alias=>'USERS-FORM'
+,p_page_mode=>'MODAL'
+,p_step_title=>'USERS FORM'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>1661186590416509825
+,p_page_template_options=>'#DEFAULT#:js-dialog-class-t-Drawer--pullOutEnd'
+,p_dialog_chained=>'N'
+,p_dialog_resizable=>'Y'
+,p_protection_level=>'C'
+,p_page_component_map=>'02'
+,p_created_on=>wwv_flow_imp.dz('20250305062149Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_last_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(17061309786407372298)
+,p_plug_name=>'USERS FORM'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>4501440665235496320
+,p_plug_display_sequence=>10
+,p_query_type=>'TABLE'
+,p_query_table=>'TEST'
+,p_include_rowid_column=>false
+,p_is_editable=>true
+,p_edit_operations=>'i:u:d'
+,p_lost_update_check_type=>'VALUES'
+,p_plug_source_type=>'NATIVE_FORM'
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(17061311489076372301)
+,p_plug_name=>'Buttons'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>2126429139436695430
+,p_plug_display_sequence=>20
+,p_plug_display_point=>'REGION_POSITION_03'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'expand_shortcuts', 'N',
+  'output_as', 'TEXT',
+  'show_line_breaks', 'Y')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(17061311845405372301)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(17061311489076372301)
+,p_button_name=>'CANCEL'
+,p_button_action=>'DEFINED_BY_DA'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_image_alt=>'Cancel'
+,p_button_position=>'CLOSE'
+,p_button_alignment=>'RIGHT'
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(17061313271603372303)
+,p_button_sequence=>20
+,p_button_plug_id=>wwv_flow_imp.id(17061311489076372301)
+,p_button_name=>'DELETE'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_image_alt=>'Delete'
+,p_button_position=>'DELETE'
+,p_button_alignment=>'RIGHT'
+,p_button_execute_validations=>'N'
+,p_confirm_message=>'&APP_TEXT$DELETE_MSG!RAW.'
+,p_confirm_style=>'danger'
+,p_button_condition=>':P6_TEST is not null and :P6_ID is not null'
+,p_button_condition2=>'SQL'
+,p_button_condition_type=>'EXPRESSION'
+,p_database_action=>'DELETE'
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(17061313670840372303)
+,p_button_sequence=>30
+,p_button_plug_id=>wwv_flow_imp.id(17061311489076372301)
+,p_button_name=>'SAVE'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Apply Changes'
+,p_button_position=>'NEXT'
+,p_button_alignment=>'RIGHT'
+,p_button_condition=>':P6_TEST is not null and :P6_ID is not null'
+,p_button_condition2=>'SQL'
+,p_button_condition_type=>'EXPRESSION'
+,p_database_action=>'UPDATE'
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(17061314063250372303)
+,p_button_sequence=>40
+,p_button_plug_id=>wwv_flow_imp.id(17061311489076372301)
+,p_button_name=>'CREATE'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4072362960822175091
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Create'
+,p_button_position=>'NEXT'
+,p_button_alignment=>'RIGHT'
+,p_button_condition=>':P6_TEST is null or :P6_ID is null'
+,p_button_condition2=>'SQL'
+,p_button_condition_type=>'EXPRESSION'
+,p_database_action=>'INSERT'
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(17061310099514372299)
+,p_name=>'P6_TEST'
+,p_source_data_type=>'VARCHAR2'
+,p_is_primary_key=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(17061309786407372298)
+,p_item_source_plug_id=>wwv_flow_imp.id(17061309786407372298)
+,p_use_cache_before_default=>'NO'
+,p_prompt=>'Test'
+,p_source=>'TEST'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_label_alignment=>'RIGHT'
+,p_field_template=>1609121967514267634
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_protection_level=>'S'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'value_protected', 'Y')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(17061310432979372300)
+,p_name=>'P6_ID'
+,p_source_data_type=>'NUMBER'
+,p_is_primary_key=>true
+,p_is_query_only=>true
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(17061309786407372298)
+,p_item_source_plug_id=>wwv_flow_imp.id(17061309786407372298)
+,p_use_cache_before_default=>'NO'
+,p_prompt=>'Id'
+,p_source=>'ID'
+,p_source_type=>'REGION_SOURCE_COLUMN'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_label_alignment=>'RIGHT'
+,p_field_template=>1609121967514267634
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_protection_level=>'S'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'value_protected', 'Y')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(17061311985076372301)
+,p_name=>'Cancel Dialog'
+,p_event_sequence=>10
+,p_triggering_element_type=>'BUTTON'
+,p_triggering_button_id=>wwv_flow_imp.id(17061311845405372301)
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'click'
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(17061312796382372302)
+,p_event_id=>wwv_flow_imp.id(17061311985076372301)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_DIALOG_CANCEL'
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(17061314801722372304)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(17061309786407372298)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form USERS FORM'
+,p_attribute_01=>'REGION_SOURCE'
+,p_attribute_05=>'Y'
+,p_attribute_06=>'Y'
+,p_attribute_08=>'Y'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>17061314801722372304
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(17061315246349372304)
+,p_process_sequence=>50
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_CLOSE_WINDOW'
+,p_process_name=>'Close Dialog'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when=>'CREATE,SAVE,DELETE'
+,p_process_when_type=>'REQUEST_IN_CONDITION'
+,p_internal_uid=>17061315246349372304
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(17061314426251372303)
+,p_process_sequence=>10
+,p_process_point=>'BEFORE_HEADER'
+,p_region_id=>wwv_flow_imp.id(17061309786407372298)
+,p_process_type=>'NATIVE_FORM_INIT'
+,p_process_name=>'Initialize form USERS FORM'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>17061314426251372303
+,p_created_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_updated_on=>wwv_flow_imp.dz('20250305062151Z')
+,p_created_by=>'SHREYADHAKAL28@GMAIL.COM'
+,p_updated_by=>'SHREYADHAKAL28@GMAIL.COM'
+);
+wwv_flow_imp.component_end;
+end;
+/
